@@ -133,6 +133,8 @@ var accounts = [
     type: 'personal'
   },
 ];
+
+
 //7.1 Calculate the total cash in accounts
 var sum = 0;
 for (var key in accounts){
@@ -144,8 +146,15 @@ console.log(sum);
 
 //7.2 Find the amount of money in the account with the largest balance
 
+var largestAmount = 0;
+for( var key in accounts) {
+  largestAmount += accounts[key].amount;
+}
+
+console.log(largestAmount);
 
 //7.3 Find the name of the account with the smallest balance
+
 
 
 //7.4 Calculate the average bank account value
@@ -154,6 +163,11 @@ console.log(average);
 
 //7.5 Find the value of marcs bank account
 
+for (var key in accounts) {
+  if (accounts[key].name === "marc"){
+    console.log(accounts[key].amount);
+  }
+}
 
 
 //7.6 Find the holder of the largest bank account
