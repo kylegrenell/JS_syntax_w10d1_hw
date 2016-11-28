@@ -69,26 +69,26 @@
 
 
 
-// function greaterNumber(a, b){
-//   if(a > b){
-//       return a;
-//     }else{
-//       return b;
-//     }
-//   }
+function greaterNumber(a, b){
+  if(a > b){
+      return a;
+    }else{
+      return b;
+    }
+  }
 
-// console.log(Math.max(5, 10));
+console.log(Math.max(5, 10));
 
 
-// var greater = function(a,b){
-//   if(a > b){
-//     return a;
-//   }else{
-//     return b;
-//   }
-// }
+var greater = function(a,b){
+  if(a > b){
+    return a;
+  }else{
+    return b;
+  }
+}
 
-// console.log(greater(1,8));
+console.log(greater(1,8));
 
 
 

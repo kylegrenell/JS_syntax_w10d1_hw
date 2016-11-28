@@ -25,6 +25,16 @@ undefined;    // falsy
 "";           // falsy
 0;            // fasly
 
+// test to see if truthy/falsy
+var truthyFalsy = function(value){
+  if (value){
+    return true;
+  } else {
+    return false; 
+  }
+}
+
+console.log(truthyFalsy("cat"));
 
 //Section 3
 
@@ -96,8 +106,9 @@ for (var i = 0; i < vegArray.length; i++){
 //6.4 Loop again using a "for in"
 var vegCount = 0;
 for(var vegCount in vegArray){
-  console.log("your vegetables are" + " " + vegArray);
+  console.log("your vegetables are " + vegArray);
 }
+
 
 //Section 7
 var accounts = [
@@ -123,14 +134,52 @@ var accounts = [
   },
 ];
 //7.1 Calculate the total cash in accounts
+var sum = 0;
+for (var key in accounts){
+  sum += accounts[key].amount;
+}
+
+console.log(sum);
+
+
 //7.2 Find the amount of money in the account with the largest balance
+
+
 //7.3 Find the name of the account with the smallest balance
+
+
 //7.4 Calculate the average bank account value
+var average = sum / 5;
+console.log(average);
+
 //7.5 Find the value of marcs bank account
+
+
+
 //7.6 Find the holder of the largest bank account
+
+
+
 //7.7 Calculate the total cash in business accounts
+
+
+
 //7.8 Find the largest personal account owner
 
 
 //Section 8
 //Assign a variable myPerson to a hash, giving them a name, height, favourite food and an eat method
+var myPerson = {
+  name: "Jerome",
+  height: 175,
+  favouriteFood: "Pizza",
+  eat: function(){
+    return this.favouriteFood;
+  }
+}
+
+console.log(myPerson.eat());
+
+
+
+
