@@ -78,19 +78,41 @@ var accounts = [
 ];
 
 
-var largestAmount = 0;
-for( var key in accounts) {
-  largestAmount += accounts[key].amount;
-}
 
-console.log(largestAmount);
-
-
-for (var key in accounts) {
-  if (accounts[key].name === "marc"){
-    console.log(accounts[key].amount);
+var largestAccount = 0;
+for (var key in accounts){
+  if ((accounts[key].type === 'personal' && largestAccount < accounts[key].amount)){
+    largestAccount = accounts[key].amount;
   }
 }
+
+console.log(largestAccount);
+
+// var largest = 0;
+// var largestBankAccount = "";
+// for (var key in accounts){
+//   if (largest < accounts[key].amount){
+//     largest = accounts[key].amount;
+//     largestBankAccount = accounts[key].name;
+//   }
+// }
+
+// console.log(largestBankAccount);
+
+
+// var largestAmount = 0;
+// for( var key in accounts) {
+//   largestAmount += accounts[key].amount;
+// }
+
+// console.log(largestAmount);
+
+
+// for (var key in accounts) {
+//   if (accounts[key].name === "marc"){
+//     console.log(accounts[key].amount);
+//   }
+// }
 
 // var largestAmount = 0;
 // for (var key in accounts){

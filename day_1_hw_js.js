@@ -161,6 +161,8 @@ console.log(largestAmount);
 var average = sum / 5;
 console.log(average);
 
+
+
 //7.5 Find the value of marcs bank account
 
 for (var key in accounts) {
@@ -176,9 +178,25 @@ for (var key in accounts) {
 
 //7.7 Calculate the total cash in business accounts
 
+var totalCash = 0;
+for (var key in accounts){
+  if (accounts[key].type === 'business'){
+    totalCash += accounts[key].amount;
+  }
+}
 
+console.log(totalCash);
 
 //7.8 Find the largest personal account owner
+
+var largestAccount = 0;
+for (var key in accounts){
+  if ((accounts[key].type === 'personal' && largestAccount < accounts[key].amount)){
+    largestAccount = accounts[key].amount;
+  }
+}
+
+console.log(largestAccount);
 
 
 //Section 8
